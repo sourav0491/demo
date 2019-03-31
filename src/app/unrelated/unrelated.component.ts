@@ -7,7 +7,7 @@ import{DataCommunicationService} from '../data-communication.service';
   styleUrls: ['./unrelated.component.css']
 })
 export class UnrelatedComponent implements OnInit {
-  msg:string="this is a message from unrelated component";
+  msg:string="";
   constructor(private _dataCommunicationService:DataCommunicationService) { }
 
   ngOnInit() {
