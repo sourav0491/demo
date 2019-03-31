@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'demo';
+  title = 'Component communication in angular';
+  parent_param="this parameter is from parent";
+  childMessage:string="no message from child yet";
+
+  updateChildMsg(msg){
+    this.childMessage=msg;
+  }
 }

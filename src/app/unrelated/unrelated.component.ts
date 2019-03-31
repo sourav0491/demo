@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{DataCommunicationService} from '../data-communication.service';
 
 @Component({
   selector: 'app-unrelated',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./unrelated.component.css']
 })
 export class UnrelatedComponent implements OnInit {
-
-  constructor() { }
+  msg:string="this is a message from unrelated component";
+  constructor(private _dataCommunicationService:DataCommunicationService) { }
 
   ngOnInit() {
+  }
+
+  sendMessageToAll(){
+    this._dataCommunicationService.sendMessage(this.msg);
   }
 
 }
