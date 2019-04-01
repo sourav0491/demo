@@ -1,12 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
+<div class="parent-container">
 <div style="text-align:center">
   <h1>
-    Welcome to {{ title }}!
+    {{ title }}
   </h1>
 </div>
-<p>{{childMessage}}</p>
-  
+<h6>{{childMessage}}</h6>
+<input type="text"  placeholder="Type Message" #msg>
+<button (click)="communicate(msg)">Communicate to child</button>
+
 <div class="grid-container">
     
 
